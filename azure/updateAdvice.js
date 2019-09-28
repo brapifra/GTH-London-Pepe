@@ -1,4 +1,4 @@
-const client = require('./db.js/index.js');
+const client = require('./db.js');
 
 const databaseDefinition = { id: "advicesdb" };
 const collectionDefinition = { id: "advices" };

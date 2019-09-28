@@ -5,6 +5,8 @@
   "main": "setup.js",
   "scripts": {
     "start": "lite-server --baseDir=\"public\"",
+    "host": "func start",
+    "deploy": "func deploy",
     "postinstall": "npm run setup",
     "setup": "node setup.js",
     "update-data": "node update.js"
