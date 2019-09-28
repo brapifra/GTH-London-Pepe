@@ -6,7 +6,7 @@ Project submission for the `Global Travel Hackathon in LONDON, by Pepe team`.
 Kee is a conversational UI travel buddy that assists you every step of the way with personalised suggestions that suit your accessibility needs.
 
 ![demo](./screenshots/demo.gif)
-![chat](./screenshots/chat.png)
+<img src="./screenshots/chat.png" height="500px"/>
 
 ## :books: Description
 
