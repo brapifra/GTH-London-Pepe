@@ -5,6 +5,7 @@ import Video from "src/components/Video";
 import SideLayout from "src/components/SideLayout";
 import styled from "styled-components";
 import Svg from "src/components/Svg";
+import Fade from "react-reveal/Fade";
 
 import Place from "../components/Place";
 
@@ -36,6 +37,9 @@ const InfoBlock = styled.div`
   }
 `;
 
+const FIRST_ANIMATION = 500;
+const SECOND_ANIMATION = 2000;
+
 export default function Recommendation({
   title = "Zombie Apocalypse Escape Room",
   subtitle = "Fully accessible",
@@ -53,27 +57,31 @@ export default function Recommendation({
               <Alert>
                 <Text>{title}</Text>
               </Alert>
-              <Alert>
-                <Text
-                  style={{
-                    display: "flex",
-                    color: "#00826f",
-                    alignItems: "center",
-                  }}
-                >
-                  <Svg
-                    src="static/assets/icons8-wheelchair.svg"
-                    margin="0 1rem 0 0"
-                  />
-                  {subtitle}
-                </Text>
-              </Alert>
+              <Fade right delay={SECOND_ANIMATION}>
+                <Alert>
+                  <Text
+                    style={{
+                      display: "flex",
+                      color: "#00826f",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Svg
+                      src="static/assets/icons8-wheelchair.svg"
+                      margin="0 1rem 0 0"
+                    />
+                    {subtitle}
+                  </Text>
+                </Alert>
+              </Fade>
             </InfoBlock>
           </Block>
 
-          <Alert width="85%">
-            <Place />
-          </Alert>
+          <Fade left delay={FIRST_ANIMATION}>
+            <Alert width="85%">
+              <Place />
+            </Alert>
+          </Fade>
         </MainSection>
       }
     />
