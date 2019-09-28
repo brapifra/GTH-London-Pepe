@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
-    background-color: ${({ theme }) => theme.orbit.paletteCloudLight};
+    background-color: '#f7f8fa';
   }
 `;
 
