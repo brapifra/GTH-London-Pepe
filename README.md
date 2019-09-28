@@ -1,11 +1,12 @@
-# GTH-Location-TeamName
+# GTH-London-Pepe
 Project submission for the `Global Travel Hackathon in LONDON, by Pepe team`.
 
 **Write one sentence explaining what does your project.**
 
---
-![Add a screenshot from your project. For example the main website page.]
-(https://raw.githubusercontent.com/Global-Travel-Hackathon/GTH-Location-TeamName/master/screenshots/Global-Travel-Hackathon-image.png)
+Kee is a conversational UI travel buddy that assists you every step of the way with personalised suggestions that suit your accessibility needs.
+
+![demo](./screenshots/demo.gif)
+![chat](./screenshots/chat.png)
 
 ## :books: Description
 
