@@ -19,37 +19,38 @@ module.exports = async function(context, req, advices) {
       collectionDefinition
     );
 
+    const doc = await container.item(
+      "c2d9d314-a933-39a6-afc9-4bc61d8c1c0e"
+    );
 
-    let advice = {};
-    if (req.body && req.body.advice === '1') {
-      advice = {
-        media: "",
-        title: "Title here",
-        subTitle: "subTitle",
-        speech: "hey this is blabla lbalbla"
-      };
-    } else {
-      advice = {
-        media: "",
-        title: "Zombie apocalypse Escape Room",
-        subTitle: "Fully accessible",
-        card: {
-          description: "Great Zombie experience visiting the best Scape room in the city",
-          media: "insertFotoHere"
-        },
-        speech: "hey this is blabla lbalbla"
-      };
-    }
+    const { body: existingAdvice } = await doc.read();
 
+    const updates = {
+      media: "",
+      title: "Zombie apocalypse Escape Room",
+      subTitle: "Fully accessible",
+      card: {
+        description: "Great Zombie experience visiting the best Scape room in the city",
+        media: "insertFotoHere"
+      },
+      speech: "hey this is blabla lbalbla"
+    };
+
+    Object.assign(existingAdvice, updates);
     try {
-        await container.items.create(advice);
-        context.log('Database updated')
+        await doc.replace(existingAdvice);
+        context.log('Databse updated')
+
+
+    // try {
+    //     await container.items.create(advice);
+    //     context.log('Database updated')
 
     } catch(e) {
         context.error('ERROR')
     }
 
-    context.res.body = advice;
+    context.res.body = updates;
     // GET
   } else {
     context.res.body = advices;
