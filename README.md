@@ -10,11 +10,7 @@ Kee is a conversational UI travel buddy that assists you every step of the way w
 
 ## :books: Description
 
-Write a short abstract of the project. Don't forget to include:
-
-* Hackathon topic you used (Sustainability, Accessibility or Community);
-Accesibility:
-Sustainability:
+Conversational UI is the future inside Accesible User Experience field, and that is why we have created a Conversational Buddy that helps the user throughout the whole travelling process.
 
 * The development tools used to build the project;
 VSCode
