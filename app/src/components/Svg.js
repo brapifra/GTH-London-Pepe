@@ -11,11 +11,12 @@ const SvgContainer = styled.div`
 
   width: ${({ width }) => (width !== undefined ? width : "inherit")};
   height: ${({ height }) => (height !== undefined ? height : "inherit")};
+  margin: ${({ margin }) => margin};
 `;
 
-export default function Svg({ width, height, src }) {
+export default function Svg({ width, height, margin, src }) {
   return (
-    <SvgContainer width={width} height={height}>
+    <SvgContainer width={width} height={height} margin={margin}>
       <ReactSVG src={src} />
     </SvgContainer>
   );
