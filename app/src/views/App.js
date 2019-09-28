@@ -3,6 +3,7 @@ import { Heading } from "@kiwicom/orbit-components";
 import styled from "styled-components";
 import Video from "src/components/Video";
 import SideLayout from "src/components/SideLayout";
+import Svg from "src/components/Svg";
 
 const Container = styled.div`
   position: relative;
@@ -22,9 +23,7 @@ export default function App() {
         aside={<Video src="static/prague.mp4" startAt={37} autoPlay muted />}
         main={
           <MainSection>
-            <Heading color="white" type="display" element="h1">
-              Kee
-            </Heading>
+            <Svg height="100px" src="static/assets/Kee-logo-nav.svg" />
             <Heading type="displaySubtitle" element="h1">
               Prague
             </Heading>

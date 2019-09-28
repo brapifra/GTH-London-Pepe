@@ -5,6 +5,16 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { SignalRProvider } from "src/context/SignalR";
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: GothamRounded;
+    src: url("static/GothamRounded-Light.otf") format("opentype");
+  }
+  @font-face {
+    font-family: GothamRounded;
+    font-weight: bold;
+    src: url("static/GothamRounded-Medium.otf") format("opentype");
+  }
+
   html {
     font-size: ${({ theme }) => theme.orbit.fontSizeTextNormal};
   }
