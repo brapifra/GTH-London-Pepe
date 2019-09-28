@@ -10,7 +10,7 @@ const StyledVideo = styled.video`
 export default function Video({ src, startAt = 0, ...props }) {
   const ref = React.useRef(null);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const video = ref.current;
 
     if (!video) {
