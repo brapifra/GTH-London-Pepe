@@ -1,9 +1,9 @@
 const LOCAL_BASE_URL = 'http://localhost:7071';
-const REMOTE_BASE_URL = '<FUNCTION_APP_ENDPOINT>';
+const REMOTE_BASE_URL = 'https://kee-fn.azurewebsites.net';
 
 const getAPIBaseUrl = () => {
     const isLocal = /localhost/.test(window.location.href);
-    return isLocal ? LOCAL_BASE_URL : REMOTE_BASE_URL;
+    return REMOTE_BASE_URL;
 }
 
 const app = new Vue({
@@ -41,6 +41,7 @@ const connect = () => {
 
     connection.on('updated', updatedStock => {
         const index = app.stocks.findIndex(s => s.id === updatedStock.id);
+        console.log(updatedStock)
         app.stocks.splice(index, 1, updatedStock);
     });
 
