@@ -1,0 +1,26 @@
+{
+  "presets": [
+    "@kiwicom/babel-preset-kiwicom",
+    [
+      "next/babel",
+      {
+        "transform-runtime": {
+          "useESModules": false
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    ["styled-components", { "ssr": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "src": "./src",
+          "static": "./static"
+        }
+      }
+    ]
+  ]
+}
