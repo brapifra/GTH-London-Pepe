@@ -28,13 +28,13 @@ export default function App() {
   return (
     <Container>
       {isEmpty(data) ? (
-        <Svg src="static/assets/Kee-logo-nav.svg" width="40%" />
+        <Svg src="static/assets/Kee-logo.svg" width="40%" />
       ) : (
         <SideLayout
           aside={<Video src="static/prague.mp4" startAt={37} autoPlay muted />}
           main={
             <MainSection>
-              <Svg height="100px" src="static/assets/Kee-logo-nav.svg" />
+              <Svg height="100px" src="static/assets/Kee-logo.svg" />
               <Heading type="displaySubtitle" element="h1">
                 Prague
               </Heading>
