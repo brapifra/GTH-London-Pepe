@@ -5,7 +5,8 @@ module.exports = async function(context, req) {
   const {data} = await axios.get('https://kiwicom-prod.apigee.net/v2/search?fly_from=LCY&fly_to=PRG&date_from=05%2F12%2F2019&date_to=25%2F12%2F2019&return_from=20%2F12%2F2019&return_to=25%2F12%2F2019&adults=1&vehicle_type=aircraft',
   {
       headers: {
-          apikey: 'JVKmD43rE9Vr8Awz5WXCOH8jUBQftAat',
+          // Lol
+          apikey: '',
           accept: 'application/json'
       }
   });
